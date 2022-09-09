@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding-top: 15px;
+    min-height: 100vh;
+    background: #242b33;
+    background: #161f24;
+    background: #14191c;
+    text-align: center;
+    vertical-align: auto;
+    justify-content: center;
+}
+
+.title {
+    color: #bec2bf;
+    font-weight: 700;
+    font-size: x-large;
+    /*top: -350; */
+    opacity: 60;
+    top: 20;
+    animation: alternate;
+    animation-name: fade;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+    from {
+        opacity: 60%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+#poke-input {
+    visibility: hidden;
+    /* hidden at start, turned off in code */
+    opacity: 0;
+    background-color: rgb(216, 206, 188);
+    color: #161f24;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s ease-out;
+    /*width: 100%;*/
+    padding-left: 3px;
+}
+
+.clickable-button {
+    width: 90%;
+    height: 1.2%;
+    border-radius: 7px;
+    transition: 0.3s ease-in-out;
+    background-color: #242b33;
+}
+
+.button {
+    position: relative;
+    top: 100px;
+}
+
+#start-btn {
+    /*top: -240;
+    height: 3%;
+    width: 35%; */
+    height: 25px;
+    width: 80px;
+    font-weight: 700;
+    font-size: large;
+    color: #bec2bf;
+    border-color: #bec2bf;
+    border-style: solid;
+    transition: 0.3s ease-out;
+    vertical-align: middle;
+}
+
+#start-btn:hover {
+    color: #242b33;
+    border-color: black;
+}
+
+.clickable-button:hover {
+    background-color: #bec2bf;
+}
