@@ -38,6 +38,22 @@ body {
     }
 }
 
+.output {
+    color: #bec2bf;
+    font-size: small;
+    font-weight: 100;
+    visibility: hidden;
+    position: relative;
+    opacity: 0;
+    top: 80px;
+    transition: 0.5s ease-in-out;
+}
+
+.input {
+    position: relative;
+    top: 120px;
+}
+
 #poke-input {
     visibility: hidden;
     /* hidden at start, turned off in code */
