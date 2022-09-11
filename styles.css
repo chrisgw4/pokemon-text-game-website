@@ -13,7 +13,17 @@ body {
     background: #14191c;
     text-align: center;
     vertical-align: auto;
-    justify-content: center;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content {
+    position: absolute;
+    border: red dotted;
+    width: 300px;
+    top: 0;
 }
 
 .title {
@@ -21,12 +31,14 @@ body {
     font-weight: 700;
     font-size: x-large;
     /*top: -350; */
+    position: relative;
     opacity: 60;
-    top: 20;
+    top: 05;
     animation: alternate;
     animation-name: fade;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    transform: scale(1.2);
 }
 
 @keyframes fade {
@@ -40,29 +52,39 @@ body {
 
 .output {
     color: #bec2bf;
-    font-size: small;
+    font-size: medium;
     font-weight: 100;
     visibility: hidden;
-    position: relative;
+    position: absolute;
     opacity: 0;
-    top: 80px;
+    top: 100px;
+    height: 60px;
+    width: 200px;
     transition: 0.5s ease-in-out;
+    text-align: left;
+    align-self: center;
+    padding-left: 3px;
+    padding-top: 1px;
+    border: #bec2bf dotted;
+    border-radius: 10px;
+    transform: scale(1);
 }
 
 .input {
-    position: relative;
-    top: 120px;
+    top: 430px;
+    position: absolute;
 }
 
 #poke-input {
     visibility: hidden;
+    position: relative;
     /* hidden at start, turned off in code */
     opacity: 0;
     background-color: rgb(216, 206, 188);
     color: #161f24;
     font-weight: 700;
     border: none;
-    border-radius: 5px;
+    border-radius: 500px;
     transition: 0.5s ease-out;
     /*width: 100%;*/
     padding-left: 3px;
@@ -94,6 +116,42 @@ body {
     border-style: solid;
     transition: 0.3s ease-out;
     vertical-align: middle;
+    position: relative;
+}
+
+@keyframes pulsate {
+    from {
+        width: 200px;
+        height: 30px;
+        top: 300px;
+    }
+    to {
+        width: 210px;
+        height: 35px;
+        top: 298.5px;
+    }
+}
+
+@keyframes makeCircle {
+    from {
+        width: 80px;
+        height: 25px;
+    }
+    to {
+        width: 30px;
+        height: 30px;
+        background-color: #bec2bf;
+        border-radius: 100px;
+    }
+}
+
+@keyframes moveAnim {
+    from {
+        top: 0;
+    }
+    to {
+        top: 300;
+    }
 }
 
 #start-btn:hover {

@@ -6,22 +6,29 @@ class OutputText {
 
     interval = null
 
-    textBox = document.getElementById("#line-two")
+    line = document.getElementById("line-two")
 
-    constructor(string) {
+    delay = 0;
+
+    constructor(string, delay) {
         this.str = string
+        this.line.textContent = ""
+        this.delay = delay;
     }
 
-    writeText() {
-        console.log(this.str)
+    writeTexts() {
+
         if (this.index <= this.str.length) {
-            this.textBox.textContent = str.slice(0, this.index);
+            console.log(this.index)
+            this.line.textContent = this.str.slice(0, this.index);
+            //if (this.line.style.opacity == 100)
             this.index++;
-        } else { clearInterval(interval) }
+        } else { clearInterval(this.interval) }
     }
 
     startInterval() {
-        interval = setInterval(writeText, 45);
+        if (this.interval == null)
+            this.interval = setInterval(this.writeTexts.bind(this), this.delay);
     }
 
     getStr() {
