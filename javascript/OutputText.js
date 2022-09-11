@@ -31,7 +31,18 @@ class OutputText {
             this.interval = setInterval(this.writeTexts.bind(this), this.delay);
     }
 
-    getStr() {
-        return this.str;
+    get str() { return this.str }
+
+    set str(string) {
+        this.str = string
     }
+
+    resetInterval() {
+        this.index = 0;
+        this.interval = null;
+    }
+
+
+
+
 }

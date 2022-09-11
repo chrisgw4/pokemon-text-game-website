@@ -10,12 +10,15 @@ function onClickStart() {
     // startBtn.style.transition = ".5s"
     //startBtn.style.opacity = "0"
     // startBtn.style.visibility = "hidden"
+    if (startBtn.clientWidth >= 150 && startBtn.offsetTop >= 200) {
+        return;
+    }
 
     outputArea.style.visibility = "visible"
     outputArea.style.opacity = "100"
     outputArea.style.transition = "4s"
 
-    startBtn.style.animation = "makeCircle .2s ease-in-out forwards"
+    startBtn.style.animation = "makeCircle .25s ease-in forwards"
     startBtn.textContent = ""
     intervalMoveStartBtn = setInterval(moveStartBtn, 100)
 
@@ -33,7 +36,7 @@ function moveStartBtn() {
         startBtn.style.borderRadius = "100px"
         startBtn.style.background = "#bec2bf"
 
-        startBtn.style.animation = "moveAnim .5s ease-in forwards"
+        startBtn.style.animation = "moveAnim 1s ease-in forwards"
         t.startInterval()
 
 
