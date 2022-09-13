@@ -26,7 +26,7 @@ function onClickStart() {
 let t = new OutputText("What is your Name?", 60)
 
 function moveStartBtn() {
-    console.log(startBtn.clientWidth)
+    //console.log(startBtn.clientWidth)
 
     if (startBtn.clientWidth == 26) {
         startBtn.style.transition = ".4s"

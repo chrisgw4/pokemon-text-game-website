@@ -19,7 +19,7 @@ class OutputText {
     writeTexts() {
 
         if (this.index <= this.str.length) {
-            console.log(this.index)
+            //console.log(this.index)
             this.line.textContent = this.str.slice(0, this.index);
             //if (this.line.style.opacity == 100)
             this.index++;
